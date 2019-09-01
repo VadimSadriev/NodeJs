@@ -1,0 +1,15 @@
+const { Schema, model } = require('mongoose');
+
+const schema = new Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    complited: {
+        type: Boolean,
+        default: false
+    }
+
+});
+
+module.exports = model('TODO', schema);
